@@ -1,0 +1,29 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "ymaps": true
+  },
+  "rules": {
+    "no-use-before-define": [
+      "error", {
+        "functions": false, 
+        "classes": false, 
+        "variables": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }
+    ],
+    "no-plusplus": [
+      "error", {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
+  }
+}

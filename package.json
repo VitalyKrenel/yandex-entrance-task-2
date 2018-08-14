@@ -1,0 +1,30 @@
+{
+  "name": "entrance-task-2-2",
+  "version": "1.0.0",
+  "description": "The second entrance task for Yandex school",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint assets/js/*.js",
+    "stylelint": "stylelint assets/css/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitalyKrenel/yandex-entrance-task-2.git"
+  },
+  "author": "Vitaly Krenel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitalyKrenel/yandex-entrance-task-2/issues"
+  },
+  "homepage": "https://github.com/VitalyKrenel/yandex-entrance-task-2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0"
+  }
+}
