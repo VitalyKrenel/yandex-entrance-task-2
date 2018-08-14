@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint assets/js/*.js",
-    "stylelint": "stylelint assets/css/*.css"
+    "stylelint": "stylelint assets/css/*.css",
+    "browser-sync": "browser-sync . -w"
   },
   "repository": {
     "type": "git",
