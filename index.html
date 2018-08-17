@@ -5,21 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Яндекс Дом</title>
-  <link rel="stylesheet" href="/assets/css/index.css">  
+  <link rel="stylesheet" href="/assets/css/index.css"> 
 </head>
-<body>
-  <header>
-    <img src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
-    <div>  
-      <button>Меню</button>
-      <nav>
-        <ul>
-          <li><a href="#">Сводка</a></li>
-          <li><a href="#">Устройства</a></li>
-          <li><a href="#">Сценарии</a></li>
-        </ul>
-      </nav>
-    </div>
+<body class="app">
+  <header class="app__container header">
+    <img class="logo" src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
+
+    <button class="header__menu-toggle menu-toggle">
+    </button>
+
+    <nav class="nav">
+      <a class="nav__link" href="#">Сводка</a>
+      <a class="nav__link" href="#">Устройства</a>
+      <a class="nav__link" href="#">Сценарии</a>
+    </nav>
   </header>
   
   <!-- DASHBOARD -->
