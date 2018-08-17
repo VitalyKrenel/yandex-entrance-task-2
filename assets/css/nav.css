@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  top: 2.5vh;
+  left: 2.5vw;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 95vw;
+  height: 95vh;
+
+  background: #e7e7e7;
+}
+
+.nav__link {
+  width: 100%;
+  padding: 20px 0;
+
+  color: #000;
+  font: 1.5rem Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+
+  background: fixed;
+}
