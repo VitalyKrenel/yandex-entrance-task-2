@@ -1,0 +1,66 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 0;
+
+  font-family: Arial, sans-serif;
+
+  background: #e7e6e2;
+  border-radius: 20px;
+}
+
+.dashboard__container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.dashboard__heading {
+  margin: 0 0 5px 0;
+
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.dashboard__status-message {
+  margin: 0 0 15px 0;
+
+  font-size: 12px;
+}
+
+.dashboard__indicators {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.dashboard__indicator {
+  margin-right: 20px;
+}
+
+.dashboard__indicator-caption {
+  margin: 0 0 5px 0;
+
+  color: #858585;
+  font-size: 12px;
+}
+
+.dashboard__indicator-temperature {
+  margin: 0;
+
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.dashboard__weather {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  background: #858585;
+}
+
+.dashboard__weather--rainy {
+  /* TODO: Добавить стили для иконки дождя */
+}

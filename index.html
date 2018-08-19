@@ -22,20 +22,25 @@
   </header>
   
   <!-- DASHBOARD -->
-  <article>
+  <article class="app__container dashboard">
     <!-- STATUS BLOCK  -->
-    <section>
-      <p>Привет, Виталий!</p>
-      <p>Двери и окна закрыты, сигнализация включена.</p>
+    <section class="dashboard__container">
+      <p class="dashboard__heading">Привет, Виталий!</p>
+      <p class="dashboard__status-message">Двери и окна закрыты, сигнализация включена.</p>
       
-      <div>
-        <p>Дома</p>
-        <p>+23</p>
-      </div>
+      <div class="dashboard__indicators">
+        <article class="dashboard__indicator">
+          <h1 class="dashboard__indicator-caption">Дома</h1>
+          <p class="dashboard__indicator-temperature">+23</p>
+        </article>
 
-      <div>
-        <p>За окном</p>
-        <p>+19</p>
+        <article class="dashboard__indicator">
+          <h2 class="dashboard__indicator-caption">За окном</h2>
+          <p class="dashboard__indicator-temperature">
+            +19
+            <span class="dashboard__weather dashboard__weather--rainy"></span>
+          </p>
+        </article>
       </div>
     </section>
     <!-- #STATUS BLOCK -->
