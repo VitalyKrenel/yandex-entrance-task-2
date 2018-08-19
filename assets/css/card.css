@@ -1,0 +1,70 @@
+.card-container {
+  overflow-x: auto;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  width: fit-content;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 200px;
+  height: 120px;
+  margin-right: 20px;
+  padding: 14px 15px;
+
+  font-family: Arial, sans-serif;
+
+  background: #f7f7f7;
+  border-radius: 20px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card__heading {
+  margin: 0 0 3px 0;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card__status-message {
+  margin: 0;
+
+  color: #858585;
+  font-size: 12px;
+}
+
+.card__icon {
+  position: absolute;
+  top: 15px;
+}
+
+/* .card--theme-temperature::before {
+  position: absolute;
+  top: 15px;
+
+  width: 24px;
+  height: 24px;
+
+  background: url('/assets/images/icon-temperature.svg') no-repeat top left;
+  background-size: contain;
+  content: '';
+}
+ */
+
