@@ -1,6 +1,14 @@
 .menu-toggle {
   width: 24px;
   height: 24px;
+  padding: 0;
 
+  font: 16px Arial, sans-serif;
+
+  /* Link-only  */
+  text-decoration: none;
+
+  /* Button-only */
   background: #eee;
+  border: none;
 }
