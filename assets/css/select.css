@@ -1,0 +1,37 @@
+.select {
+  position: relative;
+
+  padding: 10px 16px;
+
+  font: bold 13px Arial, sans-serif;
+
+  border: none;
+
+  -webkit-appearance: none;
+}
+
+.select::after {
+  position: absolute;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  /* background: #000;: 1px solid #000; */
+  background: #000;
+  content: ' ';
+}
+
+.select--rounded {
+  border-radius: 20px;
+}
+
+.select--theme-yellow {
+  /* width: 80px; */
+
+  background: #ffd93e;
+}
+
+.select__option {
+  padding: 2px;
+}
