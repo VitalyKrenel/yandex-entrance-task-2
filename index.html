@@ -8,17 +8,26 @@
   <link rel="stylesheet" href="/assets/css/index.css"> 
 </head>
 <body class="app">
-  <header class="app__container header">
+  <header class="app__container app__container--shrunk header">
     <img class="logo" src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
 
     <button class="header__menu-toggle menu-toggle">
     </button>
 
-    <nav class="nav">
-      <a class="nav__link" href="#">Сводка</a>
+    <div class="app__nav-container">
+      <nav class="app__container app__container--shrunk app__nav nav">
+        <a class="nav__link nav__link--active" href="#">Сводка</a>
       <a class="nav__link" href="#">Устройства</a>
       <a class="nav__link" href="#">Сценарии</a>
     </nav>
+
+      <ul class="app__container app__container--shrunk nav header__auxilary-nav auxilary-nav" aria-hidden="false">
+        <li><a class="auxilary-nav__link" href="#">Помощь</a></li>
+        <li><a class="auxilary-nav__link" href="#">Обратная связь</a></li>
+        <li><a class="auxilary-nav__link" href="#">Разработчикам</a></li>
+        <li><a class="auxilary-nav__link" href="#">Условия использования</a></li>
+      </ul>
+    </div>
   </header>
   
   <!-- DASHBOARD -->
