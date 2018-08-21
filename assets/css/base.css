@@ -1,4 +1,4 @@
-/* Styles responsible for App basic structure and UI elements positioning */
+/* Override default behavior of tags */
 
 html {
   box-sizing: border-box;
@@ -8,13 +8,4 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.header__menu-toggle {
-  margin-left: auto;
 }
