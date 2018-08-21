@@ -1,8 +1,12 @@
+/* Vendor */
 @import '../../node_modules/normalize.css/normalize.css';
-@import 'app.css';
+
+/* App structure */
 @import 'base.css';
-@import 'nav.css';
+@import 'app.css';
+@import 'header.css';
 @import 'footer.css';
+@import 'nav.css';
 @import 'auxilary-nav.css';
 @import 'dashboard.css';
 @import 'card.css';
