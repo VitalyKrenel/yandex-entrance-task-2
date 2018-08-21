@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
 
+  margin-bottom: 31px;
   padding: 20px 0;
 
   font-family: Arial, sans-serif;
 
-  background: #e7e6e2;
+  background: #e9e8e4;
   border-radius: 20px;
 }
 
@@ -18,9 +19,6 @@
 
 .dashboard__heading {
   margin: 0 0 5px 0;
-
-  font-weight: bold;
-  font-size: 18px;
 }
 
 .dashboard__status-message {
@@ -39,8 +37,6 @@
 }
 
 .dashboard__indicator-caption {
-  margin: 0 0 5px 0;
-
   color: #858585;
   font-size: 12px;
 }

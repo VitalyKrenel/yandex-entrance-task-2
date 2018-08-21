@@ -2,6 +2,7 @@
 @import 'base.css';
 @import 'blocks.css';
 @import 'nav.css';
+@import 'footer.css';
 @import 'dashboard.css';
 @import 'card.css';
-@import 'footer.css';
+@import 'heading.css';
