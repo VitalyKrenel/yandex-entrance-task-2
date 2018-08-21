@@ -1,27 +1,21 @@
 .nav {
-  position: fixed;
-  top: 2.5vh;
-  left: 2.5vw;
-
-  display: none;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 95vw;
-  height: 95vh;
-
-  background: #e7e7e7;
+  align-items: flex-start;
 }
 
 .nav__link {
-  width: 100%;
-  padding: 20px 0;
+  padding: 20px 10px;
 
-  color: #000;
-  font: 1.5rem Arial, sans-serif;
-  text-align: center;
+  color: #878787;
+  font: bold 16px Arial, sans-serif;
   text-decoration: none;
+}
 
-  background: fixed;
+.nav__link:hover {
+  color: #333;
+}
+
+.nav__link--active {
+  color: #333;
 }
