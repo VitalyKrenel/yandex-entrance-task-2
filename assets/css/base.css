@@ -10,10 +10,6 @@ html {
   box-sizing: inherit;
 }
 
-.app__container {
-  margin: 20px;
-}
-
 .header {
   display: flex;
   align-items: center;
