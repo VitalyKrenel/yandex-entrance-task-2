@@ -1,0 +1,27 @@
+.footer {
+  position: relative;
+
+  padding: 0 20px;
+
+  color: #858585;
+  font: 12px Arial, sans-serif;
+}
+
+/* NOTE: Хук для скрытия на мобильных и отображения в случае desktop и tablet режимов */
+.footer__auxilary-nav {
+  display: none;
+}
+
+.footer__link {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  color: #858585;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  margin: 0;
+
+  text-align: center;
+}
