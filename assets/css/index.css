@@ -1,8 +1,10 @@
 @import '../../node_modules/normalize.css/normalize.css';
+@import 'app.css';
 @import 'base.css';
-@import 'blocks.css';
 @import 'nav.css';
 @import 'footer.css';
+@import 'auxilary-nav.css';
 @import 'dashboard.css';
 @import 'card.css';
+@import 'blocks.css';
 @import 'heading.css';
