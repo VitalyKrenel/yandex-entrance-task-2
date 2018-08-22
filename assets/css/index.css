@@ -6,6 +6,7 @@
 @import 'heading.css';
 @import 'menu-toggle.css';
 @import 'nav.css';
+@import 'indicator.css';
 
 /* App specific */
 @import 'base.css';

@@ -1,0 +1,17 @@
+.indicator-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.indicator__temperature {
+  margin: 0;
+
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.indicator__weather {
+  width: 18px;
+  height: 18px;
+}

@@ -35,23 +35,3 @@
 .dashboard__indicator {
   margin-right: 20px;
 }
-
-.dashboard__indicator-temperature {
-  margin: 0;
-
-  color: #000;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.dashboard__weather {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-
-  background: #858585;
-}
-
-.dashboard__weather--rainy {
-  /* TODO: Добавить стили для иконки дождя */
-}
