@@ -38,17 +38,19 @@
       <p class="dashboard__status-message">Двери и окна закрыты, сигнализация включена.</p>
       
       <div class="dashboard__indicators">
-        <article class="dashboard__indicator">
-          <h1 class="dashboard__heading heading heading--4 dashboard__indicator-caption">Дома</h1>
-          <p class="dashboard__indicator-temperature">+23</p>
+        <article class="dashboard__indicator indicator">
+          <h1 class="dashboard__heading heading heading--4 heading--gray">Дома</h1>
+          <div class="indicator-inner">
+            <p class="indicator__temperature">+23</p>
+          </div>
         </article>
 
-        <article class="dashboard__indicator">
-          <h2 class="dashboard__heading heading heading--4 dashboard__indicator-caption">За окном</h2>
-          <p class="dashboard__indicator-temperature">
-            +19
-            <span class="dashboard__weather dashboard__weather--rainy"></span>
-          </p>
+        <article class="dashboard__indicator indicator">
+          <h2 class="dashboard__heading heading heading--4 heading--gray">За окном</h2>
+          <div class="indicator-inner">
+            <p class="indicator__temperature">+19</p>
+            <img class="indicator__weather" src="/assets/images/icons/icon-cloud-drizzle.svg" alt="Идет небольшой дождь">
+          </div>
         </article>
       </div>
     </section>
