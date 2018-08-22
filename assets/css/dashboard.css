@@ -35,3 +35,7 @@
 .dashboard__indicator {
   margin-right: 20px;
 }
+
+.dashboard__weather {
+  margin-left: 5px;
+}
