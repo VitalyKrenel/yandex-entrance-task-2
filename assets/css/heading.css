@@ -26,3 +26,7 @@
 .heading--bold {
   font-weight: bold;
 }
+
+.heading--gray {
+  color: #858585;
+}
