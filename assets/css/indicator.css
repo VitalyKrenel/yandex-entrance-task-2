@@ -1,6 +1,7 @@
 .indicator-inner {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 }
 
 .indicator__temperature {
@@ -13,5 +14,5 @@
 
 .indicator__weather {
   width: 18px;
-  height: 18px;
+  height: 24px;
 }
