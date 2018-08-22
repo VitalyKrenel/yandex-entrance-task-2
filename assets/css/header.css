@@ -6,3 +6,16 @@
 .header__menu-toggle {
   margin-left: auto;
 }
+
+.header__auxilary-nav {
+  margin: 0 0 40px 0;
+}
+
+.header__nav {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.header__nav--auxilary {
+  margin-bottom: 40px;
+}

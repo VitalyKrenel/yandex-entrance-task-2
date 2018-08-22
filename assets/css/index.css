@@ -1,17 +1,16 @@
 /* Vendor */
 @import '../../node_modules/normalize.css/normalize.css';
 
-/* Universal blocks */
+/* Reusable components */
 @import 'select.css';
 @import 'heading.css';
 @import 'menu-toggle.css';
+@import 'nav.css';
 
-/* App structure */
+/* App specific */
 @import 'base.css';
 @import 'app.css';
 @import 'header.css';
 @import 'footer.css';
 @import 'dashboard.css';
-@import 'nav.css';
-@import 'auxilary-nav.css';
 @import 'card.css';
