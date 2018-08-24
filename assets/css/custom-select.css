@@ -1,0 +1,100 @@
+.custom-select__select {
+  position: relative;
+
+  display: inline-block;
+  padding: 7px 32px 8px 16px;
+
+  font: bold 13px Arial, sans-serif;
+
+  background: #ffd93e;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.custom-select__select::after {
+  position: absolute;
+  top: 9px;
+  right: 16px;
+
+  width: 14px;
+  height: 14px;
+
+  background: url('/assets/images/icons/icon-arrow-down.svg');
+  transform: scale(0.75);
+
+  transition: all 0.25s 0s ease-out;
+  content: ' ';
+}
+
+.custom-select__select--active::after {
+  top: 8px;
+
+  transform: scale(0.75) rotateZ(180deg);
+}
+
+.custom-select__options-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.custom-select__options-backdrop--visible {
+  display: block;
+}
+
+.custom-select__options {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  flex-flow: column;
+  width: 300px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background: #f7f7f7;
+  transform: translate(-50%, -50%);
+
+  transition: display 0s, opacity 0.25s ease-out;
+}
+
+.custom-select__options-container--open {
+  display: block;
+}
+
+.custom-select__option {
+  padding: 20px 0;
+
+  font: 16px Arial, sans-serif;
+  text-align: center;
+
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+
+  transition: all 0.15s 0s ease-in-out;
+}
+
+.custom-select__option:hover {
+  background: #ffd93e;
+}
+
+.custom-select__option--active {
+  background: #ffd93e;
+}
+
+.custom-select__option:last-of-type {
+  border-bottom: none;
+}

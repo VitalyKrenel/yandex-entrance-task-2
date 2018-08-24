@@ -112,13 +112,20 @@
       <h1 class="heading heading--1 heading--bold">Избранные устройства</h1>
       
       <!-- DEVICE GROUPS -->
-      <select class="app__select select select--rounded select--theme-yellow" name="groups">
-        <option class="select__option" value="all" default>Все</option>
-        <option class="select__option" value="kichen">Кухня</option>
-        <option class="select__option" value="living-room">Зал</option>
-        <option class="select__option" value="bulb">Лампочки</option>
-        <option class="select__option" value="security-camera">Камеры</option>
-      </select>
+      <div class="app__select" data-cs>
+        <button class="custom-select__select" data-cs-select>
+          Все
+        </button>
+        <div class="custom-select__options-backdrop" data-cs-popup>
+          <ul class="custom-select__options">
+            <li class="custom-select__option" data-cs-option="all" data-cs-default>Все</li>
+            <li class="custom-select__option" data-cs-option="kitchen">Кухня</li>
+            <li class="custom-select__option" data-cs-option="living-room">Зал</li>
+            <li class="custom-select__option" data-cs-option="bulb" >Лампочки</li>
+            <li class="custom-select__option" data-cs-option="security-camera">Камеры</li>
+          </ul>
+        </div>
+      </div>
       <!-- #DEVICE GROUPS -->
       
     </header>
@@ -186,5 +193,8 @@
     <p class="footer__copyright"><small>© 2001–2017  ООО «Яндекс»</small></p>
   </footer>
   <!-- #FOOTER -->
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/index.js" type="module"></script>
 </body>
 </html>

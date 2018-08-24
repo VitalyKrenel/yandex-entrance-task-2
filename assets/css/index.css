@@ -7,6 +7,7 @@
 @import 'menu-toggle.css';
 @import 'nav.css';
 @import 'indicator.css';
+@import 'custom-select.css';
 
 /* App specific */
 @import 'base.css';
