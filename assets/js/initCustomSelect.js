@@ -1,75 +1,84 @@
-export default function initCustomSelect() {
-  const namespace = 'data-cs';
+import Selectable from './selectable.js';
 
-  const selectAttr = `${namespace}-select`;
-  const optionAttr = `${namespace}-option`;
-  const defaultAttr = `${namespace}-default`;
-  const popupAttr = `${namespace}-popup`;
+export default function initCustomSelect() {
+  const ns = 'data-cs'; // Custom select namespace
+
+  const attrs = {
+    select: ns.concat('-select'),
+    option: ns.concat('-option'),
+    default: ns.concat('-default'),
+    value: ns.concat('-value'), 
+    popup: ns.concat('-popup'),
+  };
+
+  const selectors = {
+    namespace: `[${ns}]`,
+    select: `[${attrs.select}]`,
+    option: `[${attrs.option}]`,
+    default: `[${attrs.default}]`,
+    popup: `[${attrs.popup}]`,
+  };
 
   // Active state CSS classes for active (or default) option and select
-  const selectActiveClass = 'custom-select__select--active';
-  const optionActiveClass = 'custom-select__option--active';
-  const popupOpenClass = 'custom-select__options-backdrop--visible';
+  const activeState = {
+    select: 'custom-select__select--active',
+    option: 'custom-select__option--active',
+    popup: 'custom-select__options-backdrop--visible',
+  };
 
-  const customSelectNodeList = document.querySelectorAll(`[${namespace}]`);
+  const customSelectNodeList = document.querySelectorAll(selectors.namespace);
 
-  customSelectNodeList.forEach((customSelect) => {
-    const selectNode = customSelect.querySelector(`[${selectAttr}]`);
-    const optionNodeList = customSelect.querySelectorAll(`[${optionAttr}]`);
-    const defaultOptionNode = customSelect.querySelector(`[${defaultAttr}]`);
-    const popupNode = customSelect.querySelector(`[${popupAttr}]`);
+  customSelectNodeList.forEach((customSelectNode) => {
+    const selectNode = customSelectNode.querySelector(selectors.select);
+    const select = new Selectable(selectNode, activeState.select, attrs.value);
+
+    const optionNodeList = customSelectNode.querySelectorAll(selectors.option);
+    const options = Array.from(optionNodeList).map(
+      optionNode => new Selectable(optionNode, activeState.option, attrs.value),
+    );
 
     // TODO: Add check: Missing default option
-    const defaultOption = {
-      value: defaultOptionNode.getAttribute(optionAttr),
-      text: defaultOptionNode.textContent,
-    };
+    const defaultOptionNode = customSelectNode.querySelector(selectors.default);
+    const defaultOption = new Selectable(defaultOptionNode, activeState.option, attrs.value);
 
-    selectNode.setAttribute(selectAttr, defaultOption.value);
-    selectNode.textContent = defaultOption.text;
+    const popupNode = customSelectNode.querySelector(selectors.popup);
 
-    defaultOptionNode.classList.add(optionActiveClass);
+    // Hack: popup block does not require settable properties (value and text),
+    // but for the sake of code simplicity I've decided to not use the class
+    // composition trick (.. extends C(B()))
+    const popup = new Selectable(popupNode, activeState.popup);
 
-    console.log(selectNode);
-    console.log(optionNodeList);
-    console.log(defaultOption);
+    select.value = defaultOption.value;
+    select.text = defaultOption.text;
 
-    selectNode.addEventListener('click', () => {
-      selectNode.classList.add(selectActiveClass);
-      popupNode.classList.add(popupOpenClass);
+    defaultOption.makeActive();
+
+    // Click on select button will trigger popup
+    select.onClick(() => {
+      select.makeActive();
+      popup.makeActive();
     });
 
-    function customSelectReset() {
-      popupNode.classList.remove(popupOpenClass);
-      selectNode.classList.remove(selectActiveClass);
-    }
+    // Click on popup backdrop will deactivate select
+    popup.onClick(() => {
+      popup.makeInactive();
+      select.makeInactive();
+    });
 
-    popupNode.addEventListener('click', customSelectReset);
-
-    optionNodeList.forEach((optionNode) => {
-      optionNode.addEventListener('click', (e) => {
-        const selectedValue = selectNode.getAttribute(selectAttr);
-
-        // console.log(selectedValue);
-
-        const optionList = Array.from(optionNodeList);
-        const activeOptionNode = optionList.find(
-          option => option.getAttribute(optionAttr) === selectedValue,
+    options.forEach((option) => {
+      option.onClick(() => {
+        const activeOption = options.find(
+          opt => opt.value === select.value,
         );
 
-        // console.log(activeOptionNode);
+        activeOption.makeInactive();
+        option.makeActive();
 
-        activeOptionNode.classList.remove(optionActiveClass);
-        optionNode.classList.add(optionActiveClass);
+        select.value = option.value;
+        select.text = option.text;
 
-        const newSelectedValue = optionNode.getAttribute(optionAttr);
-        const newSelectedText = optionNode.textContent;
-        selectNode.setAttribute(selectAttr, newSelectedValue);
-        selectNode.textContent = newSelectedText;
-
-        setTimeout(customSelectReset, 300);
-
-        e.stopPropagation();
+        popup.makeInactive();
+        select.makeInactive();
       });
     });
   });
