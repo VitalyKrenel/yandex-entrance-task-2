@@ -1,8 +1,9 @@
 .custom-select__select {
   position: relative;
 
-  display: inline-block;
-  padding: 7px 32px 8px 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 16px;
 
   font: bold 13px Arial, sans-serif;
 
@@ -13,12 +14,10 @@
 }
 
 .custom-select__select::after {
-  position: absolute;
-  top: 9px;
-  right: 16px;
-
+  display: block;
   width: 14px;
-  height: 14px;
+  height: 13px;
+  margin-left: 2px; /* Text starts from margin-left=-3px arrow's position */
 
   background: url('/assets/images/icons/icon-arrow-down.svg');
   transform: scale(0.75);
@@ -28,8 +27,6 @@
 }
 
 .custom-select__select--active::after {
-  top: 8px;
-
   transform: scale(0.75) rotateZ(180deg);
 }
 
