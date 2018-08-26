@@ -9,6 +9,7 @@
   text-decoration: none;
 
   /* Button-only */
-  background: #eee;
+  background: url('/assets/images/icons/icon-hamburger.svg') no-repeat center;
+  background-size: 16px 13px;
   border: none;
 }
