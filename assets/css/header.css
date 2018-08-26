@@ -3,7 +3,16 @@
   align-items: center;
 }
 
+.header__logo {
+  z-index: 11;  /* Cover the off-canvas navigation block */
+
+  margin-left: 20px;
+}
+
 .header__menu-toggle {
+  z-index: 11;  /* Cover the off-canvas navigation block */
+
+  margin-right: 20px;
   margin-left: auto;
 }
 
