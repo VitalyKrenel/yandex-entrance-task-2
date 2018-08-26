@@ -1,13 +1,12 @@
 export default class Popup {
-  constructor(node) {
+  constructor(node, { containerClass, popupClass }) {
     const container = node;
     const popup = container.children[0];
 
-    container.stateClass = 'custom-select__options-backdrop--visible';
-    popup.stateClass = 'custom-select__options--visible';
+    container.stateClass = containerClass;
+    popup.stateClass = popupClass;
 
     container.addEventListener('transitionend', (e) => {
-      console.log('Transition has ended.');
       if (e.target === container && !container.classList.contains(container.stateClass)) {
         container.style.visibility = 'hidden';
       }
