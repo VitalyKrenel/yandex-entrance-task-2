@@ -54,6 +54,7 @@
 }
 
 .custom-select__options-container--visible {
+  opacity: 1;
 }
 
 .custom-select__options {
@@ -68,12 +69,13 @@
 
   list-style: none;
   background: #f7f7f7;
+  transform: scale(0);
 
-  transition: display 0s, opacity 0.25s ease-out;
+  transition: transform 0.25s 0.1s ease-in-out;
 }
 
-.custom-select__options-container--open {
-  display: block;
+.custom-select__options--visible {
+  transform: scale(1);
 }
 
 .custom-select__option {
