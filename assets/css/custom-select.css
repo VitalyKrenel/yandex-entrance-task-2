@@ -33,7 +33,7 @@
   transform: scale(0.75) rotateZ(180deg);
 }
 
-.custom-select__options-backdrop {
+.custom-select__options-container {
   position: fixed;
   top: 0;
   right: 0;
@@ -41,21 +41,23 @@
   left: 0;
   z-index: 10;
 
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background: rgba(0, 0, 0, 0.35);
-  -webkit-backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
   backdrop-filter: blur(10px);
+
+  transition: opacity 0.25s 0.2s ease-out;
 }
 
-.custom-select__options-backdrop--visible {
-  display: block;
+.custom-select__options-container--visible {
 }
 
 .custom-select__options {
   position: fixed;
-  top: 50%;
-  left: 50%;
 
   display: flex;
   flex-flow: column;
@@ -66,7 +68,6 @@
 
   list-style: none;
   background: #f7f7f7;
-  transform: translate(-50%, -50%);
 
   transition: display 0s, opacity 0.25s ease-out;
 }
