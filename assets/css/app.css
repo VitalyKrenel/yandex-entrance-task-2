@@ -15,6 +15,10 @@
   margin-bottom: 35px;
 }
 
+.app__container--margin-reduced {
+  margin-bottom: 15px;
+}
+
 .app__nav-container {
   position: fixed;
   top: 0;
