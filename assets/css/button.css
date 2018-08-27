@@ -1,0 +1,27 @@
+.button {
+  color: #000;
+  font: 18px/21px Arial, sans-serif;
+
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+.button--theme--modal {
+  width: 100%;
+  padding: 21px 16px 18px;
+
+  font-weight: bold;
+}
+
+.button--yellow {
+  background: #ffd93e;
+}
+
+.button--text--dark-gray {
+  color: #333;
+}
+
+.button--white {
+  background: #fff;
+}
