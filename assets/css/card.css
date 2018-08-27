@@ -17,19 +17,25 @@
   position: relative;
 
   display: flex;
-  flex: 0 0 auto;
   flex-direction: column;
   justify-content: flex-end;
-
-  width: 200px;
-  height: 120px;
-  margin-right: 20px;
-  padding: 14px 15px;
 
   font-family: Arial, sans-serif;
 
   background: #f7f7f7;
   border-radius: 20px;
+}
+
+.card--type--micro {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 120px;
+  margin-right: 20px;
+  padding: 14px 15px;
+}
+
+.card--type--major {
+  padding-top: 20px;
 }
 
 .card:last-child {
@@ -38,9 +44,10 @@
 
 .card__heading {
   margin: 0 0 3px 0;
+}
 
-  font-weight: bold;
-  font-size: 14px;
+.card__header {
+  margin-bottom: 15px;
 }
 
 .card__status-message {
