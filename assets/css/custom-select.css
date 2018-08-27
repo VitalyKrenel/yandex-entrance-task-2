@@ -31,48 +31,14 @@
 }
 
 .custom-select__options-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-
-  display: flex;
-  justify-content: center;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.35);
-  visibility: hidden;
-  opacity: 0;
-  backdrop-filter: blur(10px);
-
-  transition: opacity 0.25s 0.2s ease-out;
-}
-
-.custom-select__options-container--visible {
-  opacity: 1;
 }
 
 .custom-select__options {
-  position: fixed;
-
-  display: flex;
-  flex-flow: column;
   width: 300px;
-
-  margin: 0;
-  padding: 0;
 
   list-style: none;
   background: #f7f7f7;
-  transform: scale(0);
-
-  transition: transform 0.25s 0.1s ease-in-out;
-}
-
-.custom-select__options--visible {
-  transform: scale(1);
 }
 
 .custom-select__option {
