@@ -193,6 +193,51 @@
   </footer>
   <!-- #FOOTER -->
 
+  <!-- TEMPLATES -->
+  <div class="modal-container" data-modal="light">
+    <article class="app__container app__container--margin-reduced app__container--shrunk modal card card--white card--type--major" data-modal-body>
+
+      <header class="app__container app__container--shrunk card__header">
+        <h1 class="card__heading heading heading--1 heading--bold">Xiaomi Yeelight LED Smart Bulb</h1>
+        <p class="card__status-message">Включится в 17:00</p>
+      </header>
+      
+      <div class="card__radio-group card-container">
+        <div class="card-container__inner">
+
+          <div class="radio-button">
+            <input class="radio-button__checkbox" id="brightness-mode-1" type="radio" name="light" value="Вручную" checked>
+            <label class="radio-button__button" for="brightness-mode-1">Вручную</label>
+          </div>
+          
+          <div class="radio-button">
+            <input class="radio-button__checkbox" id="brightness-mode-2" type="radio" name="light" value="Дневной свет">
+            <label class="radio-button__button" for="brightness-mode-2">Дневной свет</label> 
+          </div>
+          
+          <div class="radio-button">
+            <input class="radio-button__checkbox" id="brightness-mode-3" type="radio" name="light" value="Ночной свет">
+            <label class="radio-button__button" for="brightness-mode-3">Ночной свет</label> 
+          </div>
+
+          <div class="radio-button">
+            <input class="radio-button__checkbox" id="brightness-mode-4" type="radio" name="light" value="Ночной свет">
+            <label class="radio-button__button" for="brightness-mode-4">Полумрак</label> 
+          </div>
+        
+        </div>
+      </div>
+      <div class="card__range-container">
+        <input class="range-input" type="range">
+      </div>
+    </article>
+    <div class="app__container app__container--shrunk">
+      <button class="app__container app__container--margin-reduced modal-button button button--theme--modal button--yellow" data-modal-confirm>Применить</button>
+      <button class="app__container app__container--margin-reduced modal-button button button--theme--modal button--text--dark-gray" data-modal-close>Закрыть</button>
+    </div>
+  </div>
+  <!-- #TEMPLATES -->
+
   <!-- SCRIPTS -->
   <script src="/assets/js/index.js" type="module"></script>
 </body>
