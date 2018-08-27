@@ -1,5 +1,5 @@
 import CustomSelect from './customSelect.js';
-import Popup from './popup.js';
+import Modal from './modal.js';
 
 function selectClickHandler(select, popup) {
   select.makeActive();
@@ -31,25 +31,25 @@ export default function initCustomSelect() {
 
   customSelectNodeList.forEach((node) => {
     const customSelect = new CustomSelect(node);
-    const popupNode = node.querySelector('[data-popup]');
-    const popup = new Popup(popupNode, {
-      containerClass: 'modal-container--visible',
-      popupClass: 'modal-container--visible',
+    const modalNode = node.querySelector(Modal.selectors.namespace);
+    const modal = new Modal(modalNode, {
+      containerActiveClass: 'modal-container--visible',
+      bodyActiveClass: '',
     });
 
     // Click on select button will trigger popup
     customSelect.select.onClick(() => {
-      selectClickHandler(customSelect.select, popup);
+      selectClickHandler(customSelect.select, modal);
     });
 
     // Click on popup backdrop will deactivate select
-    popup.onClick(() => {
-      popupClickHanlder(customSelect.select, popup);
+    modal.onClick(() => {
+      popupClickHanlder(customSelect.select, modal);
     });
 
     customSelect.options.forEach((option) => {
       option.onClick(() => {
-        const selectedOption = optionClickHandler(customSelect, popup, option);
+        const selectedOption = optionClickHandler(customSelect, modal, option);
 
         customSelect.select.value = selectedOption.value;
         customSelect.select.text = selectedOption.text;
