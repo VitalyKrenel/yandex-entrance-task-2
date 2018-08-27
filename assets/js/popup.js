@@ -1,6 +1,6 @@
 export default class Popup {
-  constructor(node, { containerClass, popupClass }) {
-    const container = node;
+  constructor(containerNode, { containerClass, popupClass }) {
+    const container = containerNode;
     const popup = container.children[0];
 
     container.stateClass = containerClass;
@@ -31,7 +31,11 @@ export default class Popup {
 
   show() {
     this.container.classList.add(this.container.stateClass);
-    this.popup.classList.add(this.popup.stateClass);
+
+    // Check the cases when popup is styled through container class (context)
+    if (this.popup.stateClass) {
+      this.popup.classList.add(this.popup.stateClass);
+    }
 
     const event = new TransitionEvent('my-transitionstart', {
       detail: 'Transiton starts',
@@ -40,7 +44,11 @@ export default class Popup {
   }
 
   hide() {
-    this.popup.classList.remove(this.popup.stateClass);
     this.container.classList.remove(this.container.stateClass);
+
+    // Check the cases when popup is styled through container class (context)
+    if (this.popup.stateClass) {
+      this.popup.classList.remove(this.popup.stateClass);
+    }
   }
 }
