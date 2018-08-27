@@ -1,5 +1,6 @@
 .card-container {
   overflow-x: auto;
+  -ms-overflow-style: none;
 }
 
 .card-container::-webkit-scrollbar {
