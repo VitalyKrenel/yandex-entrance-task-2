@@ -76,16 +76,3 @@
   top: 15px;
 }
 
-/* .card--theme-temperature::before {
-  position: absolute;
-  top: 15px;
-
-  width: 24px;
-  height: 24px;
-
-  background: url('/assets/images/icon-temperature.svg') no-repeat top left;
-  background-size: contain;
-  content: '';
-}
- */
-
