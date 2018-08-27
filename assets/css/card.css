@@ -38,6 +38,10 @@
   padding-top: 20px;
 }
 
+.card--white {
+  background: #fff;
+}
+
 .card:last-child {
   margin-right: 0;
 }
@@ -50,11 +54,21 @@
   margin-bottom: 15px;
 }
 
+.card__radio-group {
+  margin-bottom: 25px;
+}
+
 .card__status-message {
   margin: 0;
 
   color: #858585;
   font-size: 12px;
+}
+
+.card__range-container {
+  position: relative;
+
+  height: 336px;
 }
 
 .card__icon {
