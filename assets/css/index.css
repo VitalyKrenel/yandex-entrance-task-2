@@ -9,6 +9,7 @@
 @import 'indicator.css';
 @import 'custom-select.css';
 @import 'range-input.css';
+@import 'radio-button.css';
 
 /* App specific */
 @import 'base.css';

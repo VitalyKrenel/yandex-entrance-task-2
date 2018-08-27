@@ -1,0 +1,38 @@
+.radio-button {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.radio-button__checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* TODO: Transfer element class to more generic button block */
+.radio-button__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+
+  font: 13px/15px Arial, sans-serif;
+
+  background: #f2f1f0;
+  border-radius: 20px;
+
+  transition: background 0.1s ease-out;
+}
+
+.radio-button__checkbox:checked + .radio-button__button {
+  background: #ffd93e;
+}
+
+.radio-button:last-child {
+  margin-right: 0;
+}
