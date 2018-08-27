@@ -42,6 +42,10 @@
   background: #fff;
 }
 
+.card--clickable {
+  cursor: pointer;
+}
+
 .card:last-child {
   margin-right: 0;
 }
