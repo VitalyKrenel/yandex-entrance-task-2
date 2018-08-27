@@ -85,7 +85,7 @@
   color: transparent;
 
   background: linear-gradient(90deg, #ffe88c, #ffb100);
-  border-color: none;
+  border: none;
   border-radius: 35px;
 
   cursor: pointer;
