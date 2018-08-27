@@ -9,7 +9,7 @@
 .card-container__inner {
   display: flex;
   flex-flow: row nowrap;
-  width: fit-content;
+  width: max-content;
   padding: 0 20px;
 }
 
