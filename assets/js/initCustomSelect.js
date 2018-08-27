@@ -33,8 +33,8 @@ export default function initCustomSelect() {
     const customSelect = new CustomSelect(node);
     const popupNode = node.querySelector('[data-popup]');
     const popup = new Popup(popupNode, {
-      containerClass: 'custom-select__options-container--visible',
-      popupClass: 'custom-select__options--visible',
+      containerClass: 'modal-container--visible',
+      popupClass: 'modal-container--visible',
     });
 
     // Click on select button will trigger popup
