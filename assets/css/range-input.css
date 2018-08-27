@@ -1,0 +1,127 @@
+.range-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 336px; /* Specific width is required for Firefox. */
+
+  background: transparent; /* Otherwise white in Chrome */
+
+  transform: translate(-50%, -50%) rotate(-90deg);
+
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+.range-input::-webkit-slider-thumb {
+  width: 60px;
+  height: 60px;
+
+  background: transparent;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(51, 51, 51, 0.1);
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.range-input::-moz-range-thumb {
+  width: 60px;
+  height: 60px;
+
+  background: transparent;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(51, 51, 51, 0.1);
+
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.range-input::-ms-thumb {
+  width: 60px;
+  height: 60px;
+
+  background: transparent;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(51, 51, 51, 0.1);
+
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.range-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(90deg, #ffe88c, #ffb100);
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.range-input::-moz-range-track {
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(90deg, #ffe88c, #ffb100);
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.range-input::-ms-track {
+  width: 100%;
+  height: 60px;
+
+  color: transparent;
+
+  background: linear-gradient(90deg, #ffe88c, #ffb100);
+  border-color: none;
+  border-radius: 35px;
+
+  cursor: pointer;
+}
+
+.range-input::-ms-fill-lower {
+  /* background: linear-gradient(90deg,#ffe88c, #ffb100);  */
+  background: transparent;
+}
+
+.range-input::-ms-fill-upper {
+  background: transparent;
+}
+
+.range-input:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.range-input::after,
+.range-input::before {
+  position: absolute;
+
+  width: 36px;
+  height: 36px;
+
+  content: '';
+}
+
+.range-input::before {
+  right: 13px;
+  bottom: 12px;
+
+  background: url('/assets/images/icons/icon-sun-max.svg');
+}
+
+.range-input::after {
+  top: 12px;
+  left: 13px;
+
+  background: url('/assets/images/icons/icon-sun-min.svg');
+}

@@ -8,6 +8,7 @@
 @import 'nav.css';
 @import 'indicator.css';
 @import 'custom-select.css';
+@import 'range-input.css';
 
 /* App specific */
 @import 'base.css';
