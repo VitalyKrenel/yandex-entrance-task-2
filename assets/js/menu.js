@@ -1,8 +1,8 @@
 export default class Menu {
-  constructor(node, container, { activeClass }) {
-    this.node = node;
-    this.container = container;
-    this.activeClass = activeClass;
+  constructor(togglerNode, containerNode, { containerActiveClass }) {
+    this.toggler = togglerNode;
+    this.container = containerNode;
+    this.containerActiveClass = containerActiveClass;
   }
 
   set onClick(handler) {
@@ -11,13 +11,14 @@ export default class Menu {
       // event is added/removed only after the handler
       handler(event);
       if (this.isActive()) {
+        console.log(this.isActive());
         document.addEventListener('click', this.onOuterClick);
       } else {
         // this.node.style.visibility = 'hidden';
         document.removeEventListener('click', this.onOuterClick);
       }
     };
-    this.node.addEventListener('click', this.clickHandler);
+    this.toggler.addEventListener('click', this.clickHandler);
   }
 
   // Can be used to remove the event handler
@@ -44,18 +45,18 @@ export default class Menu {
   }
 
   show() {
-    this.container.classList.add(this.activeClass);
+    this.container.classList.add(this.containerActiveClass);
   }
 
   hide() {
-    this.container.classList.remove(this.activeClass);
+    this.container.classList.remove(this.containerActiveClass);
   }
 
   toggle() {
-    this.container.classList.toggle(this.activeClass);
+    this.container.classList.toggle(this.containerActiveClass);
   }
 
   isActive() {
-    return this.container.classList.contains(this.activeClass);
+    return this.container.classList.contains(this.containerActiveClass);
   }
 }
