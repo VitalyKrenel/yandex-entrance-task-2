@@ -45,3 +45,7 @@
 .app__select {
   margin-left: auto;
 }
+
+.app__main--blurred {
+  filter: blur(3px);
+}

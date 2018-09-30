@@ -8,192 +8,194 @@
   <link rel="stylesheet" href="/assets/css/index.css"> 
 </head>
 <body class="app">
-  <header class="app__container header">
-    <img class="header__logo logo" src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
+  <main class="app__main" id="js-app-main">
+    <header class="app__container header">
+      <img class="header__logo logo" src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
 
-    <button class="header__menu-toggle menu-toggle js-menu-toggle">
-    </button>
-    <div class="app__nav-container js-menu-container">
-      <nav class="app__container app__container--shrunk header__nav nav">
-        <a class="nav__link nav__link--active" href="#">Сводка</a>
-        <a class="nav__link" href="#">Устройства</a>
-        <a class="nav__link" href="#">Сценарии</a>
-      </nav>
+      <button class="header__menu-toggle menu-toggle js-menu-toggle">
+      </button>
+      <div class="app__nav-container js-menu-container">
+        <nav class="app__container app__container--shrunk header__nav nav">
+          <a class="nav__link nav__link--active" href="#">Сводка</a>
+          <a class="nav__link" href="#">Устройства</a>
+          <a class="nav__link" href="#">Сценарии</a>
+        </nav>
 
-      <ul class="app__container app__container--shrunk header__nav header__nav--auxilary nav nav--auxilary" aria-hidden="false">
-        <li class="nav__item"><a class="nav__link" href="#">Помощь</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Обратная связь</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Разработчикам</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Условия использования</a></li>
-      </ul>
-    </div>
-  </header>
-  
-  <!-- DASHBOARD -->
-  <article class="app__container app__container--shrunk dashboard">
-    <!-- STATUS BLOCK  -->
-    <section class="dashboard__container">
-      <p class="dashboard__heading heading heading--1 heading--bold">Привет, Виталий!</p>
-      <p class="dashboard__status-message">Двери и окна закрыты, сигнализация включена.</p>
-      
-      <div class="dashboard__indicators">
-        <article class="dashboard__indicator indicator">
-          <h1 class="dashboard__heading heading heading--4 heading--gray">Дома</h1>
-          <div class="indicator-inner">
-            <p class="indicator__temperature">+23</p>
-          </div>
-        </article>
-
-        <article class="dashboard__indicator indicator">
-          <h2 class="dashboard__heading heading heading--4 heading--gray">За окном</h2>
-          <div class="indicator-inner">
-            <p class="indicator__temperature">+19</p>
-            <img class="dashboard__weather indicator__weather" src="/assets/images/icons/icon-cloud-drizzle.svg" alt="Идет небольшой дождь">
-          </div>
-        </article>
+        <ul class="app__container app__container--shrunk header__nav header__nav--auxilary nav nav--auxilary" aria-hidden="false">
+          <li class="nav__item"><a class="nav__link" href="#">Помощь</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Обратная связь</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Разработчикам</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Условия использования</a></li>
+        </ul>
       </div>
-    </section>
-    <!-- #STATUS BLOCK -->
-
-    <!-- DEVICE LIST -->
-    <section class="card-container">
-      <div class="card-container__inner">
-        <!-- DEVICE CARD -->
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-temperature-gray.svg" aria-hidden="true">
-          <h1 class="card__heading heading heading--3 heading--bold">Philips Cooler</h1>
-          <p class="card__status-message">Начнет охлаждать в 18:30</p>
-        </article>
-        <!-- #DEVICE CARD -->
-
-        <!-- DEVICE CARD -->      
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg" aria-hidden="true">
-          <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Yeelight LED Smart Bulb</h1>
-          <p class="card__status-message">Включится в 17:00</p>
-        </article>
-        <!-- #DEVICE CARD -->
-      </div>
-    </section>
-    <!-- #DEVICE LIST -->
-  </article>
-  <!-- #DASHBOARD -->
-
-  <!-- FAVORITE ACTIONS  -->
-  <section class="app__container">
-    <header class="app__container app__container--shrunk">
-      <h1 class="heading heading--1 heading--bold">Избранные сценарии</h1>
     </header>
-
-    <div class="card-container">
-      <div class="card-container__inner">
-        <!-- ACTION CARD -->
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg" aria-hidden="true">
-          <h1 class="card__heading heading heading--3 heading--bold">Выключить весь свет в доме и во дворе</h1>
-        </article>
-        <!-- #ACTION CARD -->
+    
+    <!-- DASHBOARD -->
+    <article class="app__container app__container--shrunk dashboard">
+      <!-- STATUS BLOCK  -->
+      <section class="dashboard__container">
+        <p class="dashboard__heading heading heading--1 heading--bold">Привет, Виталий!</p>
+        <p class="dashboard__status-message">Двери и окна закрыты, сигнализация включена.</p>
         
-        <!-- ACTION CARD -->
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-scheduled.svg" aria-hidden="true">
-          <h1 class="card__heading heading heading--3 heading--bold">Я ухожу</h1>
-        </article>
-        <!-- #ACTION CARD -->
+        <div class="dashboard__indicators">
+          <article class="dashboard__indicator indicator">
+            <h1 class="dashboard__heading heading heading--4 heading--gray">Дома</h1>
+            <div class="indicator-inner">
+              <p class="indicator__temperature">+23</p>
+            </div>
+          </article>
 
-        <!-- ACTION CARD -->
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-temperature-yellow.svg" aria-hidden="true">
-          <h1 class="card__heading heading heading--3 heading--bold">Набрать горячую ванну</h1>
-          <p class="card__status-message">Начнётся в 18:00</p>
-        </article>
-        <!-- #ACTION CARD -->
-      </div>
-    </div>
-  </section>
-  <!-- #FAVORITE ACTIONS  -->
-  
-  <!-- FAVORITE DEVICES -->
-  <section class="app__container app__container--pushing">
-    <header class="app__container app__container--shrunk header">
-      <h1 class="heading heading--1 heading--bold">Избранные устройства</h1>
-      
-      <!-- DEVICE GROUPS -->
-      <div class="app__select" data-cs>
-        <button class="custom-select__select" data-cs-select>
-          Все
-        </button>
-        <div class="modal-container custom-select__options-container" data-modal>
-          <ul class="modal custom-select__options" data-modal-body data-cs-options>
-            <li class="custom-select__option" data-cs-value="all" data-cs-default>Все</li>
-            <li class="custom-select__option" data-cs-value="kitchen">Кухня</li>
-            <li class="custom-select__option" data-cs-value="living-room">Зал</li>
-            <li class="custom-select__option" data-cs-value="bulb">Лампочки</li>
-            <li class="custom-select__option" data-cs-value="security-camera">Камеры</li>
-          </ul>
+          <article class="dashboard__indicator indicator">
+            <h2 class="dashboard__heading heading heading--4 heading--gray">За окном</h2>
+            <div class="indicator-inner">
+              <p class="indicator__temperature">+19</p>
+              <img class="dashboard__weather indicator__weather" src="/assets/images/icons/icon-cloud-drizzle.svg" alt="Идет небольшой дождь">
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- #STATUS BLOCK -->
+
+      <!-- DEVICE LIST -->
+      <section class="card-container">
+        <div class="card-container__inner">
+          <!-- DEVICE CARD -->
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-temperature-gray.svg" aria-hidden="true">
+            <h1 class="card__heading heading heading--3 heading--bold">Philips Cooler</h1>
+            <p class="card__status-message">Начнет охлаждать в 18:30</p>
+          </article>
+          <!-- #DEVICE CARD -->
+
+          <!-- DEVICE CARD -->      
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg" aria-hidden="true">
+            <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Yeelight LED Smart Bulb</h1>
+            <p class="card__status-message">Включится в 17:00</p>
+          </article>
+          <!-- #DEVICE CARD -->
+        </div>
+      </section>
+      <!-- #DEVICE LIST -->
+    </article>
+    <!-- #DASHBOARD -->
+
+    <!-- FAVORITE ACTIONS  -->
+    <section class="app__container">
+      <header class="app__container app__container--shrunk">
+        <h1 class="heading heading--1 heading--bold">Избранные сценарии</h1>
+      </header>
+
+      <div class="card-container">
+        <div class="card-container__inner">
+          <!-- ACTION CARD -->
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg" aria-hidden="true">
+            <h1 class="card__heading heading heading--3 heading--bold">Выключить весь свет в доме и во дворе</h1>
+          </article>
+          <!-- #ACTION CARD -->
+          
+          <!-- ACTION CARD -->
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-scheduled.svg" aria-hidden="true">
+            <h1 class="card__heading heading heading--3 heading--bold">Я ухожу</h1>
+          </article>
+          <!-- #ACTION CARD -->
+
+          <!-- ACTION CARD -->
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-temperature-yellow.svg" aria-hidden="true">
+            <h1 class="card__heading heading heading--3 heading--bold">Набрать горячую ванну</h1>
+            <p class="card__status-message">Начнётся в 18:00</p>
+          </article>
+          <!-- #ACTION CARD -->
         </div>
       </div>
-      <!-- #DEVICE GROUPS -->
-      
-    </header>
-    <!-- DEVICE LIST -->
-    <div class="card-container">
-      <div class="card-container__inner">
-        <article class="card card--type--micro card--clickable" data-card data-modal-open="light">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Yeelight LED Smart Bulb</h1>
-          <p class="card__status-message">Выключено</p>
-        </article>
-
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">D-Link Omna 180 Cam</h1>
-          <p class="card__status-message">Включится в <time>17:00</time></p>
-        </article>
-        
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-temperature-gray.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">Elgato Eve Degree Connected</h1>
-          <p class="card__status-message">Выключено до<time>17:00</time></p>
-        </article>
-        
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">LIFX Mini Day & Dusk A60 E27</h1>
-          <p class="card__status-message">Включится в 17:00</p>
-        </article>
-        
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Mi Air Purifier 2S</h1>
-          <p class="card__status-message">Включено</p>
-        </article>
-        
-        <article class="card card--type--micro">
-          <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
-          <h1 class="card__heading heading heading--3 heading--bold">Philips Zhirui</h1>
-          <p class="card__status-message">Выключено</p>
-        </article>  
-      </div>
-    </div>
-    <!-- DEVICE LIST -->
-  </section>
-  <!-- #FAVORITE DEVICES -->
-
-  <!-- FOOTER -->
-  <footer class="app__container app__container--shrunk footer">
-    <!-- AUXILARY NAV -->
-    <ul class="app__container footer__auxilary-nav auxilary-nav" aria-hidden="true">
-      <li><a class="footer__link" href="#">Помощь</a></li>
-      <li><a class="footer__link" href="#">Обратная связь</a></li>
-      <li><a class="footer__link" href="#">Разрабgотчикам</a></li>
-      <li><a class="footer__link" href="#">Условия использования</a></li>
-    </ul>
-    <!-- #AUXILARY NAV -->
+    </section>
+    <!-- #FAVORITE ACTIONS  -->
     
-    <p class="footer__copyright"><small>© 2001–2017  ООО «Яндекс»</small></p>
-  </footer>
-  <!-- #FOOTER -->
+    <!-- FAVORITE DEVICES -->
+    <section class="app__container app__container--pushing">
+      <header class="app__container app__container--shrunk header">
+        <h1 class="heading heading--1 heading--bold">Избранные устройства</h1>
+        
+        <!-- DEVICE GROUPS -->
+        <div class="app__select" data-cs>
+          <button class="custom-select__select" data-cs-select>
+            Все
+          </button>
+          <div class="modal-container custom-select__options-container" data-modal>
+            <ul class="modal custom-select__options" data-modal-body data-cs-options>
+              <li class="custom-select__option" data-cs-value="all" data-cs-default>Все</li>
+              <li class="custom-select__option" data-cs-value="kitchen">Кухня</li>
+              <li class="custom-select__option" data-cs-value="living-room">Зал</li>
+              <li class="custom-select__option" data-cs-value="bulb">Лампочки</li>
+              <li class="custom-select__option" data-cs-value="security-camera">Камеры</li>
+            </ul>
+          </div>
+        </div>
+        <!-- #DEVICE GROUPS -->
+        
+      </header>
+      <!-- DEVICE LIST -->
+      <div class="card-container">
+        <div class="card-container__inner">
+          <article class="card card--type--micro card--clickable" data-card data-modal-open="light">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Yeelight LED Smart Bulb</h1>
+            <p class="card__status-message">Выключено</p>
+          </article>
+
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">D-Link Omna 180 Cam</h1>
+            <p class="card__status-message">Включится в <time>17:00</time></p>
+          </article>
+          
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-temperature-gray.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">Elgato Eve Degree Connected</h1>
+            <p class="card__status-message">Выключено до<time>17:00</time></p>
+          </article>
+          
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">LIFX Mini Day & Dusk A60 E27</h1>
+            <p class="card__status-message">Включится в 17:00</p>
+          </article>
+          
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-yellow.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">Xiaomi Mi Air Purifier 2S</h1>
+            <p class="card__status-message">Включено</p>
+          </article>
+          
+          <article class="card card--type--micro">
+            <img class="card__icon" src="/assets/images/icons/icon-sun-gray.svg">
+            <h1 class="card__heading heading heading--3 heading--bold">Philips Zhirui</h1>
+            <p class="card__status-message">Выключено</p>
+          </article>  
+        </div>
+      </div>
+      <!-- DEVICE LIST -->
+    </section>
+    <!-- #FAVORITE DEVICES -->
+
+    <!-- FOOTER -->
+    <footer class="app__container app__container--shrunk footer">
+      <!-- AUXILARY NAV -->
+      <ul class="app__container footer__auxilary-nav auxilary-nav" aria-hidden="true">
+        <li><a class="footer__link" href="#">Помощь</a></li>
+        <li><a class="footer__link" href="#">Обратная связь</a></li>
+        <li><a class="footer__link" href="#">Разрабgотчикам</a></li>
+        <li><a class="footer__link" href="#">Условия использования</a></li>
+      </ul>
+      <!-- #AUXILARY NAV -->
+      
+      <p class="footer__copyright"><small>© 2001–2017  ООО «Яндекс»</small></p>
+    </footer>
+    <!-- #FOOTER -->
+  </main>
 
   <!-- TEMPLATES -->
   <div class="modal-container" data-modal="light">

@@ -1,6 +1,6 @@
 import Modal from './modal.js';
 
-export default function initModals() {
+export default function initModals(app) {
   const cardNodeList = document.querySelectorAll('[data-card]');
 
   cardNodeList.forEach((cardNode) => {
@@ -13,16 +13,18 @@ export default function initModals() {
       containerActiveClass: 'modal-container--visible',
     });
 
-    cardNode.addEventListener('click', () => {
+    const openModalHandler = () => {
       modal.show();
-    });
+      app.classList.add('app__main--blurred');
+    };
 
-    modal.onClose = () => {
+    const closeModalHandler = () => {
+      app.classList.remove('app__main--blurred');
       modal.hide();
     };
 
-    modal.onConfirm = () => {
-      modal.hide();
-    };
+    cardNode.addEventListener('click', openModalHandler);
+    modal.onClose = closeModalHandler;
+    modal.onConfirm = closeModalHandler;
   });
 }
