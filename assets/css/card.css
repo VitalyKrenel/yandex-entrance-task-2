@@ -63,6 +63,7 @@
 }
 
 .card__radio-group {
+  flex: 0 0;
   margin-bottom: 25px;
 }
 
@@ -76,7 +77,12 @@
 .card__range-container {
   position: relative;
 
-  height: 336px;
+  display: flex;
+  flex: 0 1 336px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+
   margin-bottom: 25px;
 }
 

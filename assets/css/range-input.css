@@ -1,13 +1,10 @@
 .range-input {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
   width: 336px; /* Specific width is required for Firefox. */
+  height: 60px;
 
   background: transparent; /* Otherwise white in Chrome */
 
-  transform: translate(-50%, -50%) rotate(-90deg);
+  transform: rotate(-90deg);
 
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
 }
