@@ -39,3 +39,15 @@
 .dashboard__weather {
   margin-left: 5px;
 }
+
+@media (min-width: 560px) {
+  .dashboard\@md {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .dashboard\@md .dashboard__container {
+    padding: 20px 0;
+  }
+}
