@@ -58,7 +58,7 @@
 }
 
 .range-input::-webkit-slider-runnable-track {
-  width: 100%;
+  width: inherit;
   height: 60px;
 
   background: linear-gradient(90deg, #ffe88c, #ffb100);
@@ -67,7 +67,7 @@
 }
 
 .range-input::-moz-range-track {
-  width: 100%;
+  width: inherit;
   height: 60px;
 
   background: linear-gradient(90deg, #ffe88c, #ffb100);
@@ -76,7 +76,7 @@
 }
 
 .range-input::-ms-track {
-  width: 100%;
+  width: inherit;
   height: 60px;
 
   color: transparent;
