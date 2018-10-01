@@ -45,3 +45,11 @@
 .app__select {
   margin-left: auto;
 }
+
+.app__main {
+  transition: filter 0.25s 0.15s ease-in-out;
+}
+
+.app__main--blurred {
+  filter: blur(3px);
+}
