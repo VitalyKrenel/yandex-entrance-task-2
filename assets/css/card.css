@@ -97,13 +97,17 @@
     overflow-y: auto;
   }
 
-  .card-container__inner--column\@md {
+  .card-container--column\@md .card-container__inner {
     flex-flow: column nowrap;
     padding: 20px 0;
   }
 
-  .card {
+  .card-container--column\@md .card {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  .card-container--column\@md .card:last-child {
+    margin-bottom: 0;
   }
 }
