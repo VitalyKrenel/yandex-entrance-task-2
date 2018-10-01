@@ -91,3 +91,19 @@
   top: 15px;
 }
 
+@media (min-width: 560px) {
+  .card-container--column\@md {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .card-container__inner--column\@md {
+    flex-flow: column nowrap;
+    padding: 20px 0;
+  }
+
+  .card {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
