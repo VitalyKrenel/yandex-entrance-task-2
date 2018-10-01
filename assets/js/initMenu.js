@@ -4,7 +4,7 @@ const toggleNode = document.querySelector('.js-menu-toggle');
 const menuNode = document.querySelector('.js-menu-container');
 
 const menu = new Menu(toggleNode, menuNode, {
-  containerActiveClass: 'app__nav-container--open',
+  containerActiveClass: 'nav-container--open',
 });
 
 function toggleMenu(e) {

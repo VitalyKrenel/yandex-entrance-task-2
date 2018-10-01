@@ -19,29 +19,6 @@
   margin-bottom: 15px;
 }
 
-.app__nav-container {
-  position: fixed;
-  top: 0;
-  right: calc(var(--width) * -1);
-  z-index: 10;
-
-  display: flex;
-  flex-flow: column;
-  width: var(--width);
-  height: 100vh;
-  padding-top: 30px;
-
-  background: #fbfbfb;
-
-  transition: right 0.25s ease-out;
-
-  --width: 250px;
-}
-
-.app__nav-container--open {
-  right: 0;
-}
-
 .app__select {
   margin-left: auto;
 }

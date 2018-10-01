@@ -1,3 +1,26 @@
+.nav-container {
+  --width: 250px;
+
+  position: fixed;
+  top: 0;
+  right: calc(var(--width) * -1);
+  z-index: 10;
+
+  display: flex;
+  flex-flow: column;
+  width: var(--width);
+  height: 100vh;
+  padding-top: 30px;
+
+  background: #fbfbfb;
+
+  transition: right 0.25s ease-out;
+}
+
+.nav-container--open {
+  right: 0;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
