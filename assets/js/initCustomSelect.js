@@ -1,34 +1,19 @@
 import CustomSelect from './customSelect.js';
 import Modal from './modal.js';
 
-function selectClickHandler(select, popup) {
-  select.makeActive();
-  popup.show();
-}
-
-function popupClickHanlder(select, popup) {
-  select.makeInactive();
-  popup.hide();
-}
-
-function optionClickHandler(customSelect, popup, option) {
-  const activeOption = customSelect.options.find(
-    opt => opt.value === customSelect.select.value,
-  );
-
-  activeOption.makeInactive();
-  option.makeActive();
-
-  popup.hide();
-  customSelect.select.makeInactive();
-
-  return option;
-}
-
 export default function initCustomSelect() {
   const customSelectMatch = `[${CustomSelect.namespace}]`;
   const customSelectNodeList = document.querySelectorAll(customSelectMatch);
 
+  /*
+  * TODO: Optimize the event handlers listeners
+  *
+  * - For every target (custom select) new instances of event listeners are
+  * created. It should be a performance issue when many custom select exists;
+  *
+  * - Probably, better idea is to create a one document listener with required
+  * target match;
+  */
   customSelectNodeList.forEach((node) => {
     const customSelect = new CustomSelect(node);
     const modalNode = node.querySelector(Modal.selectors.namespace);
@@ -37,23 +22,39 @@ export default function initCustomSelect() {
       bodyActiveClass: '',
     });
 
-    // Click on select button will trigger popup
-    customSelect.select.onClick(() => {
-      selectClickHandler(customSelect.select, modal);
-    });
+    const openOptionsModal = () => {
+      customSelect.select.makeActive();
+      modal.show();
+    };
 
-    // Click on popup backdrop will deactivate select
-    modal.onClick(() => {
-      popupClickHanlder(customSelect.select, modal);
-    });
+    const closeOptionsModal = () => {
+      customSelect.select.makeInactive();
+      modal.hide();
+    };
 
-    customSelect.options.forEach((option) => {
+    const optionClickHandler = (clickedOption, options) => {
+      const activeOption = options.find(
+        opt => opt.value === customSelect.select.value,
+      );
+
+      activeOption.makeInactive();
+      clickedOption.makeActive();
+    };
+
+    const assignOptionClickHandler = (option) => {
+      // console.log(option);
       option.onClick(() => {
-        const selectedOption = optionClickHandler(customSelect, modal, option);
-
-        customSelect.select.value = selectedOption.value;
-        customSelect.select.text = selectedOption.text;
+        optionClickHandler(option, customSelect.options);
+        customSelect.select.value = option.value;
+        customSelect.select.text = option.text;
       });
-    });
+    };
+
+    // Click on select button will trigger popup
+    customSelect.select.onClick(openOptionsModal);
+    // Click anywhere in modal container will deactivate select and hide modal
+    modal.onClick(closeOptionsModal);
+
+    customSelect.options.forEach(assignOptionClickHandler);
   });
 }
