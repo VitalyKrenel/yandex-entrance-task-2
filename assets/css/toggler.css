@@ -16,9 +16,3 @@
   background: url('/assets/images/icons/icon-hamburger.svg') no-repeat center;
   background-size: 16px 13px;
 }
-
-@media (min-width: 560px) {
-  .toggler\@md {
-    display: none;
-  }
-}

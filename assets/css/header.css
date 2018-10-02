@@ -25,3 +25,9 @@
 .header__nav--auxilary {
   margin-bottom: 40px;
 }
+
+@media (min-width: 560px) {
+  .header__toggler\@md {
+    display: none;
+  }
+}
