@@ -1,21 +1,23 @@
-# Задание на вёрстку
+Project #2 for Yandex Academy (September, 2018) 
 
-Для запуска проекта:
+![Status: development](https://img.shields.io/badge/status-development-brightgreen.svg)
+
+To start the project type in terminal:
+
 ```
 npm i
 npm run start
 ```
+(Assumed you have NPM installed on your device)
 
-1. В задании выполнен только мобильный дизайн (поскольку работал по mobile first).
+## Description
 
-2. Карточка Xiaomi Yeelight LED при клике отобразит настройки освещения.
+The project is developed with native JS (ES6), CSS, HTML with mobile-first approach. Project bundler is expected to be adopted later. Images are not optimized. 
 
-3. Диммер не был реализован - планировал выполнить его в конце проекта.
+Browsers compability is a bit lacking. In plans to support **at least** 2 last versions of all major browsers (Chrome, Edge, Opera, Firefox, Safari) on desktop and mobile. 
 
-4. Анимация открытия всплывающих окон упрощена до zoomIn/zoomOut блока из центра экрана
+If you'd like to explore the project use [Github Pages Link](). I suggest using Chrome with Device Mode switched on (`Ctrl/Command` + `Shift` + `M`) for now.
 
-5. Разрабатывал с учетом следующих версий браузеров: Safari 10+, Chrome 67+, Edge 16+, Firefox 60+, мобильные Android Chrome и iOS Safari протестировать не удалось - не осталось времени.
+[Design is avaliable here.](https://yandex-shri-2018.github.io/entrance-task-2-2/guide/)
 
-При выполнении задания стоило уделить больше внимания вестке UI компонентов, а не написанию своих JS-решения для типовых задач (кастомный селект, всплывающие окна) - это стало результатом неоправданной потери времени. Подобные задачи можно было бы решить использованием простых готовых библиотек.
-
-
+**Note:** Because of testing purposes only the card **Xiaomi Yeelight LED** is clickable. It triggers lighting preferences modal.
