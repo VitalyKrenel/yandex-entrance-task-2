@@ -66,3 +66,29 @@
 .nav__item:last-of-type {
   margin-bottom: 0;
 }
+
+@media (min-width: 560px) {
+  .nav-container\@md {
+    --width: auto;
+
+    position: static;
+
+    height: auto;
+    padding-top: 0;
+
+    background: transparent;
+  }
+
+  .nav-container\@md .nav {
+    flex-direction: row;
+  }
+
+  .nav-container\@md .nav--auxilary {
+    display: none;
+  }
+
+  .nav-container\@md .nav__link {
+    margin-right: 25px;
+    padding: 10px 0;
+  }
+}
