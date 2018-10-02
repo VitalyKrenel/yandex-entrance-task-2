@@ -13,3 +13,9 @@
   background-size: 16px 13px;
   border: none;
 }
+
+@media (min-width: 560px) {
+  .menu-toggle\@md {
+    display: none;
+  }
+}
