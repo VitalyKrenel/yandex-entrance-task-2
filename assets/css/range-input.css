@@ -1,5 +1,6 @@
 .range-input {
-  width: 336px; /* Specific width is required for Firefox. */
+  width: 40vh; /* Specific width is required for Firefox. */
+  max-width: 336px;
   height: 60px;
 
   background: transparent; /* Otherwise white in Chrome */
@@ -123,4 +124,13 @@
   left: 13px;
 
   background: url('/assets/images/icons/icon-sun-min.svg');
+}
+
+@media (max-height: 540px) {
+  .range-input--horizontal\@xs-height {
+    width: 100%;
+    max-width: 100%;
+
+    transform: rotate(0deg);
+  }
 }
