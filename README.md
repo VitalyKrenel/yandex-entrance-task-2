@@ -1,4 +1,4 @@
-Project #2 for Yandex Academy (September, 2018) 
+# Project \#2 for Yandex Academy (September, 2018) 
 
 ![Status: development](https://img.shields.io/badge/status-development-brightgreen.svg)
 
