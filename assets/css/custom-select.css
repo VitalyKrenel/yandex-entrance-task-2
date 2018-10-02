@@ -19,7 +19,7 @@
   height: 13px;
   margin-left: 2px; /* Text starts from margin-left=-3px arrow's position */
 
-  background: url('/assets/images/icons/icon-arrow-down.svg');
+  background: url('../images/icons/icon-arrow-down.svg');
   transform: scale(0.75);
 
   transition: all 0.25s 0s ease-out;

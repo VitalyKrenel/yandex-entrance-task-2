@@ -116,14 +116,14 @@
   right: 13px;
   bottom: 12px;
 
-  background: url('/assets/images/icons/icon-sun-max.svg');
+  background: url('../images/icons/icon-sun-max.svg');
 }
 
 .range-input::after {
   top: 12px;
   left: 13px;
 
-  background: url('/assets/images/icons/icon-sun-min.svg');
+  background: url('../images/icons/icon-sun-min.svg');
 }
 
 @media (max-height: 540px) {
