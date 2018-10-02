@@ -21,3 +21,24 @@ If you'd like to explore the project use [Github Pages Link](). I suggest using 
 [Design is avaliable here.](https://yandex-shri-2018.github.io/entrance-task-2-2/guide/)
 
 **Note:** Because of testing purposes only the card **Xiaomi Yeelight LED** is clickable. It triggers lighting preferences modal.
+
+## Todo:
+
+### Dimmer
+[ ] Add Dimmer UI component to control floor's temperature. ([Design](https://yandex-shri-2018.github.io/entrance-task-2-2/guide/#artboard0))
+
+### Cards
+[ ] Add slider for cards containers
+
+[ ] Add :hover state for cards
+
+### Accessibility
+
+[ ] Test accessibility
+
+### Overall
+[ ] Improve resposive behaviour on medium and large screens
+
+[ ] Optimize svg and png images ([SVGO](https://imageoptim.com/mac), something else for raster)
+
+[ ] Add bundling for CSS and JS
