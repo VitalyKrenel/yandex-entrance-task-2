@@ -9,9 +9,12 @@
   text-decoration: none;
 
   /* Button-only */
+  border: none;
+}
+
+.toggler--hamburger {
   background: url('/assets/images/icons/icon-hamburger.svg') no-repeat center;
   background-size: 16px 13px;
-  border: none;
 }
 
 @media (min-width: 560px) {
