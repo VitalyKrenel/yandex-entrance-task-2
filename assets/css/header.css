@@ -8,7 +8,7 @@
   margin-left: 20px;
 }
 
-.header__menu-toggle {
+.header__toggler {
   margin-right: 20px;
   margin-left: auto;
 }
@@ -24,4 +24,10 @@
 
 .header__nav--auxilary {
   margin-bottom: 40px;
+}
+
+@media (min-width: 560px) {
+  .header__toggler\@md {
+    display: none;
+  }
 }

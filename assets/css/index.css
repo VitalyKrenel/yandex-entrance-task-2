@@ -4,7 +4,7 @@
 /* Reusable components */
 @import 'select.css';
 @import 'heading.css';
-@import 'menu-toggle.css';
+@import 'toggler.css';
 @import 'nav.css';
 @import 'indicator.css';
 @import 'custom-select.css';
