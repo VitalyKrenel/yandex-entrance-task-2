@@ -3,7 +3,7 @@
 Для запуска проекта:
 ```
 npm i
-npm run browser-sync
+npm run start
 ```
 
 1. В задании выполнен только мобильный дизайн (поскольку работал по mobile first).

@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint assets/js/*.js",
-    "stylelint": "stylelint assets/css/*.css",
-    "browser-sync": "browser-sync . -w"
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint assets/js/*.js",
+    "lint:css": "stylelint assets/css/*.css",
+    "start": "browser-sync . -w"
   },
   "repository": {
     "type": "git",
