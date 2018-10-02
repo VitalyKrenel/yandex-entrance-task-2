@@ -16,7 +16,7 @@ The project is developed with native JS (ES6), CSS, HTML with mobile-first appro
 
 Browsers compability is a bit lacking. In plans to support **at least** 2 last versions of all major browsers (Chrome, Edge, Opera, Firefox, Safari) on desktop and mobile. 
 
-If you'd like to explore the project use [Github Pages Link](). I suggest using Chrome with Device Mode switched on (`Ctrl/Command` + `Shift` + `M`) for now.
+If you'd like to explore the project through [Github Pages Link](yandex-entrance-task-2). I suggest using Chrome with Device Mode switched on (`Ctrl/Command` + `Shift` + `M`) for now.
 
 [Design is avaliable here.](https://yandex-shri-2018.github.io/entrance-task-2-2/guide/)
 
