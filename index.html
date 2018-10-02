@@ -12,10 +12,17 @@
     <header class="app__container header">
       <img class="header__logo logo" src="assets/images/logo-yandex-home.svg" alt="Яндекс Дом">
 
-      <button class="header__menu-toggle menu-toggle js-menu-toggle">
+      <button class="header__menu-toggle menu-toggle menu-toggle@md js-menu-toggle">
       </button>
-      <div class="app__nav-container js-menu-container">
-        <nav class="app__container app__container--shrunk header__nav nav">
+      <div class="header__nav-container nav-container nav-container@md js-menu-container">
+        <!-- TODO: Remove usega of app__container
+             - On @md screens there are margin for --shrunk modificator
+               that are hard to remove without any tricks. E.g. if you 
+               declare a --shrunk@md than it would be working for all elements
+               on that @md screens - it is not the desired behaviour, rather a 
+               side effect of bad design
+        -->
+        <nav class="app__container app__container--shrunk header__nav nav nav@md">
           <a class="nav__link nav__link--active" href="#">Сводка</a>
           <a class="nav__link" href="#">Устройства</a>
           <a class="nav__link" href="#">Сценарии</a>
