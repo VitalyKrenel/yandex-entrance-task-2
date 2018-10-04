@@ -35,7 +35,7 @@ const FileLoader = {
 };
 
 module.exports = {
-  mode: (devMode ? 'development' : 'production'),
+  mode: devMode ? 'development' : 'production',
   entry: './src/js/index.js',
   devtool: 'source-map',
   output: {

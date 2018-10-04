@@ -8,8 +8,8 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint \"./src/js/**/*.js\"",
     "lint:css": "stylelint \"./src/css/**/*.css\"",
-    "start": "webpack-dev-server --open",
-    "build": "set NODE_ENV=production && webpack -p"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/VitalyKrenel/yandex-entrance-task-2#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.1.0",
