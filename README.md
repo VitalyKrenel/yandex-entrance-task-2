@@ -41,4 +41,6 @@ If you'd like to explore the project through [Github Pages Link](https://vitalyk
 
 [ ] Optimize svg and png images ([SVGO](https://imageoptim.com/mac), something else for raster)
 
-[ ] Add bundling for CSS and JS
+[X] ~~Add bundling for CSS and JS~~ Solved [#310d083](https://github.com/VitalyKrenel/yandex-entrance-task-2/commit/310d083835d2d9630989dce8eec0376e78e87318)
+
+[ ] Improve dist folder structure (should mimic src folder)
