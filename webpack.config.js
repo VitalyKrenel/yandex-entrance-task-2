@@ -31,7 +31,15 @@ const HTMLLoader = {
 
 const FileLoader = {
   test: /\.(png|svg|jpg|gif)$/,
-  use: ['file-loader'],
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        useRelativePath: true,
+      },
+    },
+  ],
 };
 
 module.exports = {
